@@ -2,6 +2,8 @@ package com.example.zweb;
 
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -28,13 +30,13 @@ public class SecondController {
      * Simply selects the home view to render by returning its name.
      */
     @RequestMapping(value = "/second", method = RequestMethod.GET)
-    public String open(Locale locale, Model model) {
+    public String open(Locale locale, Model model, HttpServletRequest request) {
         logger.debug("secondが呼ばれました");
-        // logger.debug("session={}",request.getSession().getClass().getName());
-        // logger.debug("sessionId={}",request.getSession().getId());
-        // request.getSession().invalidate();
-        // logger.debug("Session が削除されました。");
-        // logger.debug("sessionId={}",request.getSession().getId());
+//         logger.debug("session={}",request.getSession().getClass().getName());
+//         logger.debug("sessionId={}",request.getSession().getId());
+//         request.getSession().invalidate();
+//         logger.debug("Session がinvalidateされました。");
+//         logger.debug("sessionId={}",request.getSession().getId());
         return "second";
     }
 

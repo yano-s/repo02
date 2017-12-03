@@ -12,14 +12,14 @@ public class SessionAttrListener implements HttpSessionAttributeListener{
 
     @Override
     public void attributeAdded(HttpSessionBindingEvent event) {
-        logger.debug("Session attributeAdded : {},{}",event.getName(),event.getValue());
+        logger.debug("【SESSION】Session attributeAdded : {},{}",event.getName(),event.getValue());
     }
     @Override
     public void attributeRemoved(HttpSessionBindingEvent event) {
-        logger.debug("Session attributeRemoved : {},{}",event.getName(),event.getValue());
+        logger.debug("【SESSION】Session attributeRemoved : {},{}",event.getName(),event.getValue());
     }
     @Override
     public void attributeReplaced(HttpSessionBindingEvent event) {
-        logger.debug("Session attributeReplaced : {},{}",event.getName(),event.getValue());
+        logger.debug("【SESSION】Session attributeReplaced : {},{}",event.getName(),event.getValue());
     }
 }

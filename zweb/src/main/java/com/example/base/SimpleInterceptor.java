@@ -26,10 +26,10 @@ public class SimpleInterceptor implements HandlerInterceptor {
         // logger.info("RequestURI : {}", request.getRequestURI());
         if (handler instanceof HandlerMethod) {
             HandlerMethod handlerMethod = (HandlerMethod) handler;
-            logger.info("Controller : {}.{}", handlerMethod.getBeanType().getName(),
+            logger.info("【preHandle】Controller : {}.{}", handlerMethod.getBeanType().getName(),
                     handlerMethod.getMethod().getName());
             if ("GET".equals(request.getMethod()) && commonModel != null) {
-                logger.debug("counter add");
+                logger.debug("【preHandle】counter add");
                 commonModel.addCounter();
             }
         }
